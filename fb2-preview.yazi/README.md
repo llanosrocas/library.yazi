@@ -7,7 +7,7 @@ A Yazi plugin to preview FB2 files with cover art and metadata.
 ## Requirements
 
 - yazi version >= [26.5.6](https://github.com/sxyazi/yazi/releases/tag/v26.5.6).
-- `ffmpeg` for covers
+- `ImageMagick` for covers
 
 ## Installation
 

@@ -157,10 +157,7 @@ local function extract_and_resize(src, cover_name, ext)
   cover_file:close()
 
   local cover_resized = cover_tmp .. ".resized.jpg"
-  exec(
-    "ffmpeg",
-    { "-y", "-i", cover_tmp, "-vf", "scale=1200:-2", cover_resized }
-  )
+  exec("magick", { cover_tmp, "-resize", "1200x", cover_resized })
 
   local resized_file = io.open(cover_resized, "rb")
   if resized_file and resized_file:seek("end") > 200 then

@@ -8,7 +8,7 @@ A Yazi plugin to preview EPUB files with cover art and metadata.
 
 - yazi version >= [26.5.6](https://github.com/sxyazi/yazi/releases/tag/v26.5.6).
 - `unzip` for metadata
-- `ffmpeg` for covers
+- `ImageMagick` for covers
 
 ## Installation
 

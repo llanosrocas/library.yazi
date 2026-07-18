@@ -216,10 +216,7 @@ local function get_cover(xml)
   f:close()
 
   local cover_resized = cover_tmp .. ".resized.jpg"
-  exec(
-    "ffmpeg",
-    { "-y", "-i", cover_tmp, "-vf", "scale=1200:-2", cover_resized }
-  )
+  exec("magick", { cover_tmp, "-resize", "1200x", cover_resized })
 
   local rf = io.open(cover_resized, "rb")
   if rf and rf:seek("end") > 200 then
